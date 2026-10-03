@@ -1,0 +1,45 @@
+name: NodeNix validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.9', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Python regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Dashboard logic
+        run: node tests/test_dashboard.cjs
+      - name: Public source checks
+        run: python scripts/check_public_tree.py
+      - name: PowerShell parser and repair dry run
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tests\Test-Collectors.ps1
+      - name: Passive Windows collector smoke test
+        if: runner.os == 'Windows' && matrix.python == '3.13'
+        shell: powershell
+        run: |
+          python nodenix.py scan --scan-timeout 300 --out "$env:RUNNER_TEMP\NodeNix-ci"
+          if ($LASTEXITCODE -ne 0) { throw 'NodeNix scan failed' }
+          if (-not (Test-Path "$env:RUNNER_TEMP\NodeNix-ci\Report.html")) { throw 'Report missing' }
+          if (-not (Test-Path "$env:RUNNER_TEMP\NodeNix-ci\NodeNix-SupportBundle.zip")) { throw 'Bundle missing' }

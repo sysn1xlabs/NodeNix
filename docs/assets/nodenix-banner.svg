@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+<title id="title">NodeNix — Diagnose. Resolve. Verify.</title><desc id="desc">A project banner for the local Windows diagnostics and IT support toolkit.</desc>
+<rect width="1200" height="280" rx="20" fill="#0b1018"/>
+<rect x="28" y="28" width="1144" height="224" rx="14" fill="#121b28" stroke="#263246"/>
+<path d="M68 76L98 58L128 76V110L98 128L68 110Z" fill="none" stroke="#64e3c1" stroke-width="4"/><path d="M83 86L98 77L113 86V101L98 110L83 101Z" fill="#64e3c1"/>
+<text x="154" y="113" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#e6edf7">NodeNix</text>
+<text x="67" y="170" font-family="Arial, sans-serif" font-size="23" fill="#95a5bb">Windows diagnostics · Guided support · Portable evidence</text>
+<text x="68" y="218" font-family="Arial, sans-serif" font-size="18" letter-spacing="2" fill="#64e3c1">DIAGNOSE. RESOLVE. VERIFY.</text>
+<rect x="870" y="79" width="242" height="47" rx="8" fill="#19332f"/><text x="891" y="109" font-family="Arial, sans-serif" font-size="17" fill="#64e3c1">LOCAL · OFFLINE REPORT</text>
+<text x="887" y="173" font-family="Arial, sans-serif" font-size="17" fill="#95a5bb">PowerShell + Python</text><text x="887" y="207" font-family="Arial, sans-serif" font-size="17" fill="#95a5bb">No pip dependencies</text>
+</svg>

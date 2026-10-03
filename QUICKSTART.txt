@@ -1,0 +1,19 @@
+NODENIX 0.1.2 — DIAGNOSE. RESOLVE. VERIFY.
+
+1. Open samples\DemoReport\Report.html to explore the fictional demo.
+2. Install Python 3.9+ if needed.
+3. Open PowerShell in this folder.
+4. Run: py -3 nodenix.py scan --open
+5. Optional probes: py -3 nodenix.py scan --connectivity --open
+
+Default reports are under %TEMP%\NodeNix\scan. Windows may clean temporary
+files. Use --out with a different writable folder to retain evidence.
+
+To create a reduced share report in a different folder, in PowerShell:
+py -3 nodenix.py report "$env:TEMP\NodeNix\scan\Scan.json" --profile share --out "$env:TEMP\NodeNix\share" --open
+
+Read README.md and docs\Troubleshooting.md for setup, error handling,
+privacy and explicit repair commands. Unavailable checks are not passes.
+
+For GitHub upload, see docs\Publishing.md. Publish source files and
+fictional samples; keep actual endpoint reports private.

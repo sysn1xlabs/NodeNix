@@ -1,0 +1,40 @@
+# Python/local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.vscode/
+.idea/
+
+# Generated support evidence is private by default
+output/
+outputs/
+reports/
+scans/
+artifacts/
+releases/
+*.log
+**/repairs.jsonl
+**/Scan.json
+**/Findings.json
+**/Ticket.txt
+**/Report.html
+**/NodeNix-SupportBundle.zip
+*.zip
+*.sha256
+
+# Explicit fictional samples
+!samples/DemoReport/Report.html
+!samples/ShareReport/Report.html
+
+# Local credentials/configuration
+.env
+.env.*
+*.pem
+*.key
+credentials.*
+
+# OS noise
+.DS_Store
+Thumbs.db

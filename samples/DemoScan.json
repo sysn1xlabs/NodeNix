@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "version": "0.1.2",
+  "mode": "demo",
+  "generated_at": "2026-10-03T15:30:00Z",
+  "elevated": false,
+  "sections": {
+    "system": {
+      "status": "ok",
+      "data": {
+        "hostname": "LAB-DESKTOP-01",
+        "user": "demo-technician",
+        "os": "Windows 11 Pro",
+        "build": "26100",
+        "manufacturer": "Demo Systems",
+        "model": "Lab workstation",
+        "serial": "DEMO-ONLY",
+        "bios": "1.0",
+        "domain": "WORKGROUP",
+        "domain_joined": false,
+        "uptime_days": 18.4,
+        "memory_percent": 88.6,
+        "ram_gb": 16
+      }
+    },
+    "hardware": {
+      "status": "ok",
+      "data": {
+        "cpu": [
+          {
+            "Name": "Demo 8-core CPU",
+            "LoadPercentage": 12,
+            "NumberOfCores": 8
+          }
+        ],
+        "gpu": [
+          {
+            "Name": "Demo GPU",
+            "DriverVersion": "1.0"
+          }
+        ],
+        "battery": [],
+        "devices": [
+          {
+            "Name": "Unknown USB Device (Device Descriptor Request Failed)",
+            "PNPDeviceID": "USB\\DEMO",
+            "ConfigManagerErrorCode": 43
+          }
+        ]
+      }
+    },
+    "storage": {
+      "status": "ok",
+      "data": [
+        {
+          "drive": "C:",
+          "size_gb": 953.8,
+          "free_gb": 31.4,
+          "used_percent": 96.7,
+          "filesystem": "NTFS"
+        },
+        {
+          "drive": "D:",
+          "size_gb": 953.8,
+          "free_gb": 622.4,
+          "used_percent": 34.7,
+          "filesystem": "NTFS"
+        }
+      ]
+    },
+    "physical_disks": {
+      "status": "ok",
+      "data": [
+        {
+          "FriendlyName": "Demo NVMe",
+          "MediaType": "SSD",
+          "BusType": "NVMe",
+          "HealthStatus": "Healthy",
+          "Size": 1024000000000
+        }
+      ]
+    },
+    "network": {
+      "status": "ok",
+      "data": [
+        {
+          "adapter": "Demo Ethernet",
+          "addresses": [
+            "192.0.2.20"
+          ],
+          "gateway": [
+            "192.0.2.1"
+          ],
+          "dns": [
+            "192.0.2.250"
+          ],
+          "dhcp": true,
+          "mac": "00-00-00-00-00-00"
+        }
+      ]
+    },
+    "connectivity": {
+      "status": "ok",
+      "data": {
+        "tested": true,
+        "gateway": true,
+        "internet_icmp": true,
+        "dns": false,
+        "https": false,
+        "target": "www.microsoft.com"
+      }
+    },
+    "services": {
+      "status": "ok",
+      "data": [
+        {
+          "Name": "Spooler",
+          "DisplayName": "Print Spooler",
+          "State": "Stopped",
+          "StartMode": "Auto"
+        },
+        {
+          "Name": "wuauserv",
+          "DisplayName": "Windows Update",
+          "State": "Stopped",
+          "StartMode": "Manual"
+        },
+        {
+          "Name": "BITS",
+          "DisplayName": "Background Intelligent Transfer Service",
+          "State": "Stopped",
+          "StartMode": "Manual"
+        }
+      ]
+    },
+    "processes": {
+      "status": "ok",
+      "data": [
+        {
+          "name": "demo-browser",
+          "Id": 1000,
+          "memory_mb": 3142.1,
+          "cpu_seconds": 82.4
+        },
+        {
+          "name": "demo-app",
+          "Id": 2000,
+          "memory_mb": 842,
+          "cpu_seconds": 24
+        }
+      ]
+    },
+    "printers": {
+      "status": "ok",
+      "data": {
+        "spooler": "Stopped",
+        "printers": [
+          {
+            "Name": "Lab Printer",
+            "Default": true,
+            "WorkOffline": true,
+            "PrinterStatus": 7,
+            "PortName": "192.0.2.45",
+            "DriverName": "Demo printer driver"
+          }
+        ],
+        "jobs": [
+          {
+            "Name": "Lab Printer, 1",
+            "JobId": 1,
+            "Status": "Paused",
+            "TotalPages": 2
+          }
+        ]
+      }
+    },
+    "events": {
+      "status": "ok",
+      "data": {
+        "hours": 24,
+        "limit_per_log": 200,
+        "events": [
+          {
+            "log": "System",
+            "Id": 41,
+            "ProviderName": "Microsoft-Windows-Kernel-Power",
+            "LevelDisplayName": "Critical",
+            "time": "2026-10-03T08:00:00Z"
+          },
+          {
+            "log": "Application",
+            "Id": 1000,
+            "ProviderName": "Application Error",
+            "LevelDisplayName": "Error",
+            "time": "2026-10-03T10:00:00Z"
+          }
+        ]
+      }
+    },
+    "updates": {
+      "status": "ok",
+      "data": {
+        "hotfixes": [
+          {
+            "HotFixID": "DEMO-KB",
+            "Description": "Fictional hotfix",
+            "installed": "2026-09-20"
+          }
+        ],
+        "reboot_pending": true
+      }
+    },
+    "defender": {
+      "status": "ok",
+      "data": {
+        "AntivirusEnabled": true,
+        "RealTimeProtectionEnabled": true,
+        "AntivirusSignatureAge": 1,
+        "AMServiceEnabled": true
+      }
+    },
+    "firewall": {
+      "status": "ok",
+      "data": [
+        {
+          "Name": "Domain",
+          "Enabled": true
+        },
+        {
+          "Name": "Private",
+          "Enabled": true
+        },
+        {
+          "Name": "Public",
+          "Enabled": true
+        }
+      ]
+    },
+    "bitlocker": {
+      "status": "unavailable",
+      "data": null,
+      "error": "Demo: insufficient privileges; unknown is not pass."
+    },
+    "secure_boot": {
+      "status": "ok",
+      "data": {
+        "enabled": true
+      }
+    },
+    "tpm": {
+      "status": "ok",
+      "data": {
+        "TpmPresent": true,
+        "TpmReady": true
+      }
+    },
+    "accounts": {
+      "status": "ok",
+      "data": [
+        {
+          "Name": "LAB-DESKTOP-01\\Administrator",
+          "ObjectClass": "User",
+          "PrincipalSource": "Local"
+        }
+      ]
+    },
+    "software": {
+      "status": "ok",
+      "data": [
+        {
+          "DisplayName": "Demo Browser",
+          "DisplayVersion": "1.0",
+          "Publisher": "Demo Vendor"
+        }
+      ]
+    },
+    "startup": {
+      "status": "ok",
+      "data": [
+        {
+          "Name": "Demo Startup App",
+          "Location": "HKLM Run"
+        }
+      ]
+    },
+    "connections": {
+      "status": "ok",
+      "data": [
+        {
+          "LocalAddress": "192.0.2.20",
+          "LocalPort": 54000,
+          "RemoteAddress": "198.51.100.10",
+          "RemotePort": 443,
+          "OwningProcess": 1000
+        }
+      ]
+    },
+    "drivers": {
+      "status": "ok",
+      "data": [
+        {
+          "DeviceName": "Demo USB Controller",
+          "DriverVersion": "1.0",
+          "DriverProviderName": "Demo Vendor",
+          "IsSigned": true
+        }
+      ]
+    }
+  }
+}
